@@ -1,0 +1,19 @@
+version: '3'
+services:
+  database:
+    image: postgres
+    container_name: school_database
+    restart: always
+    ports:
+    - "0.0.0.0:5432:5432"
+    environment:
+        POSTGRES_PASSWORD: 123
+        POSTGRES_DB: teste
+        POSTGRES_USER: arthur
+
+  adminer:
+    container_name: adminer
+    image: adminer
+    restart: always
+    ports:
+      - 8000:8080
