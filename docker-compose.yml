@@ -5,10 +5,10 @@ services:
     container_name: school_database
     restart: always
     ports:
-    - "0.0.0.0:5432:5432"
+    - 5432:5432
     environment:
         POSTGRES_PASSWORD: 123
-        POSTGRES_DB: teste
+        POSTGRES_DB: school
         POSTGRES_USER: arthur
 
   adminer:
